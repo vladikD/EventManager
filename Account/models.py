@@ -7,7 +7,7 @@ from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.contrib.auth.password_validation import validate_password
 from .validators import validate_image_file_extension  # Імпорт вашого власного валідатора
 
-class CustomUser(AbstractUser):
+class User(AbstractUser):
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)  # Використання uuid.uuid4
     username = models.CharField(max_length=150, unique=True, validators=[UnicodeUsernameValidator])
     email = models.EmailField(unique=True, validators=[EmailValidator])

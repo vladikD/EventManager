@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'HotFiesta',
-    'custom_auth',
+    'hot_fiesta',
+    'Account',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "Account.User"
 
 
 # Internationalization
